@@ -58,5 +58,5 @@ jobs:
           prerelease: false
           title: "Main Build"
           files: |
-            LICENSE.txt
-            ${{env.SOLUTION_FILE_PATH}}
+            LICENSE
+            ${{env.SOLUTION_FILE_PATH.GMSAPasswordReader.exe}}
