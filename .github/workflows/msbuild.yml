@@ -3,7 +3,7 @@
 # separate terms of service, privacy policy, and support
 # documentation.
 
-name: Build
+name: MSBuild
 
 on:
   push:
@@ -51,13 +51,16 @@ jobs:
        name: GMSAPasswordReader 
        path: "bin/Release/GMSAPasswordReader.exe"  
 
+    - name: set env
+      run: echo "NOW=$(date +'%Y.%m.%d')" >> $GITHUB_ENV
+
     - name: Create Release
       uses: actions/create-release@v1
       env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} # This token is provided by Actions, you do not need to create your own token
       with:
-          tag_name: GMSAPasswordReader ${{github.run_number}}
-          release_name: Release ${{github.run_number}}
+          tag_name: ${{ env.NOW }}
+          release_name: Release ${{ env.NOW }}
           body: |
             Changes in this Release
             - First Change
