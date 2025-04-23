@@ -59,4 +59,4 @@ jobs:
           title: "Main Build"
           files: |
             LICENSE
-            ${{env.SOLUTION_FILE_PATH.GMSAPasswordReader.exe}}
+            bin/Release/GMSAPasswordReader.exe
