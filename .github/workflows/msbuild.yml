@@ -55,8 +55,8 @@ jobs:
       with:
           repo_token: "${{ secrets.GITHUB_TOKEN }}"
           automatic_release_tag: "latest"
-          prerelease: true
-          title: "Development Build"
+          prerelease: false
+          title: "Main Build"
           files: |
             LICENSE.txt
-            *.jar
+            ${{env.SOLUTION_FILE_PATH}}
