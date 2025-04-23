@@ -51,16 +51,12 @@ jobs:
        name: GMSAPasswordReader 
        path: "bin/Release/GMSAPasswordReader.exe"  
 
-    - name: Create Release
-      uses: actions/create-release@v1.1.4
-      env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} # This token is provided by Actions, you do not need to create your own token
+    - uses: "marvinpinto/action-automatic-releases@latest"
       with:
-          tag_name: ${{ env.NEXT_VERSION }}
-          release_name: Release ${{ env.NEXT_VERSION }}
-          body: |
-            Changes in this Release
-            - First Change
-            - Second Change
-          draft: false
-          prerelease: false
+          repo_token: "${{ secrets.GITHUB_TOKEN }}"
+          automatic_release_tag: "latest"
+          prerelease: true
+          title: "Development Build"
+          files: |
+            LICENSE.txt
+            *.jar
