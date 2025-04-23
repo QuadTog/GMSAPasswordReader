@@ -11,6 +11,8 @@ Clone this project and build using Visual Studio.
 ./GMSAPasswordReader --AccountName jkohler
 
 ## Previous Work and Acknowledgements
+TBD - Adjust/update the .yml to work.
+
 Huge thanks to [Mark Gamache](https://github.com/markgamache) for the basis of this program and doing all the hard work of figuring out the structures.
 
 Big thanks to [Will Schroeder](https://twitter.com/harmj0y?lang=en) and [Benjamin Delpy](https://twitter.com/gentilkiwi) for the code used to generate hashes.
