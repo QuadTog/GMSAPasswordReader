@@ -51,9 +51,6 @@ jobs:
        name: GMSAPasswordReader 
        path: "bin/Release/GMSAPasswordReader.exe"  
 
-    - name: set env
-      run: echo "NOW=$(date +'%Y.%m.%d')" >> $GITHUB_ENV
-
     - name: Create Release
       uses: actions/create-release@v1.1.4
       env:
